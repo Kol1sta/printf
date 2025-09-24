@@ -3,7 +3,7 @@
 int print_string(char *str) {
     int count = 0;
 
-    if(!str) return print_string("");
+    if(!str) return print_string("(nil)");
 
     char* current = str;
     while(*current != '\0') {

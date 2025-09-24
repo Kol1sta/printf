@@ -1,6 +1,8 @@
 #include "./src/printf.h"
 
 int main(int argc, char* argv[]) {
-    _printf("%s %d\n", "Hello, world\0", 30);
+    int a = 2;
+    int* b = &a;
+    _printf("%s %d %p\n", "Hello, world\0", 30, b);
     return 0;
 }
