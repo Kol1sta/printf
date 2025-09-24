@@ -13,10 +13,8 @@ int get_format(const char specifier, va_list args) {
         count += print_string(va_arg(args, char*));
     } else if(specifier == 'p') {
         count += print_pointer(va_arg(args, void*));
-    }
-
-    if(specifier == '%') {
-        count += print_char('%');
+    } else if(specifier == '%') {
+        count += print_percent();
     }
 
     return count;
