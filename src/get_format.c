@@ -2,7 +2,6 @@
 #include "stdint.h"
 #include "stdarg.h"
 
-
 int get_format(const char specifier, va_list args) {
     int count = 0;
 

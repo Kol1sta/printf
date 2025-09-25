@@ -3,8 +3,6 @@
 
 #include "./printf.h"
 
-#include "stdio.h"
-
 int _printf(const char* format, ...) {
     va_list args;
     int count = 0;
