@@ -14,6 +14,8 @@ int print_int(int number, flags_t flags) {
         count += print_char('-');
     } else if(flags.plus) {
         count += print_char('+');
+    } else if(flags.space) {
+        count += print_char(' ');
     }
 
     if(number_long == 0) {
