@@ -1,7 +1,7 @@
 #include "./src/printf.h"
 
 int main(int argc, char* argv[]) {
-    _printf("%+d\n", 30);
+    _printf("%+d %+d %d\n", -30, 30, 30);
 
     return 0;
 }

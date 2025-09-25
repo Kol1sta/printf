@@ -18,7 +18,7 @@ int _printf(const char* format, ...) {
 
             flags_t flags = get_flags(current + 1, &count);
 
-            count += get_format(*(current + flags.length + 1), args);
+            count += get_format(*(current + flags.length + 1), args, flags);
             current += flags.length + 1;
         } else {
             write(1, current, 1);
