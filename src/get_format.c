@@ -1,6 +1,7 @@
-#include "printf.h"
 #include "stdint.h"
 #include "stdarg.h"
+
+#include "printf.h"
 
 int get_format(const char specifier, va_list args, flags_t flags) {
     int count = 0;
