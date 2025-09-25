@@ -3,8 +3,6 @@
 
 #include "./printf.h"
 
-#include "stdio.h"
-
 int _printf(const char* format, ...) {
     va_list args;
     int count = 0;
@@ -22,7 +20,7 @@ int _printf(const char* format, ...) {
             width_t width = get_width(current + 1);
 
             current += flags.length + width.length + 1;
-            count += get_format(*current, args, flags);
+            count += get_format(*current, args, &flags, &width);
         } else {
             write(1, current, 1);
             count++;

@@ -16,18 +16,21 @@ typedef struct {
 typedef struct {
     int width;
     int length;
+    int is_exists;
 } width_t;
 
 int _printf(const char* format, ...);
 
-int get_format(const char specifier, va_list args, flags_t flags);
+int get_format(const char specifier, va_list args, flags_t* flags, width_t* width);
 flags_t get_flags(const char* format);
 width_t get_width(const char* format);
 
-int print_char(char symbol);
-int print_int(int number, flags_t flags);
-int print_string(char* str);
-int print_pointer(void* ptr);
-int print_percent();
+int print_char(char symbol, width_t* width);
+int print_int(int number, flags_t* flags, width_t* width);
+int print_string(char* str, width_t* width);
+int print_pointer(void* ptr, width_t* width);
+int print_percent(width_t* width);
+
+int set_width(width_t* width, int spaces);
 
 #endif

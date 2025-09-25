@@ -2,8 +2,8 @@
 
 #include "../printf.h"
 
-int print_pointer(void* ptr) {
-    if(ptr == NULL) return print_string("(nil)");
+int print_pointer(void* ptr, width_t* width) {
+    if(ptr == NULL) return print_string("(nil)", NULL);
 
     unsigned long address = (unsigned long)ptr;
     char buffer[20];
@@ -33,5 +33,5 @@ int print_pointer(void* ptr) {
         buffer[2 + digits] = '\0';
     }
 
-    return print_string(buffer);
+    return print_string(buffer, width);
 }
