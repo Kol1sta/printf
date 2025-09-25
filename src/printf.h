@@ -3,10 +3,20 @@
 
 #include "stdarg.h"
 
+typedef struct {
+    int minus;
+    int plus;
+    int zero;
+    int space;
+    int hash;
+
+    int length;
+} flags_t;
+
 int _printf(const char* format, ...);
 
 int get_format(const char specifier, va_list args);
-void get_flags();
+flags_t get_flags(const char* format, int* count);
 
 int print_char(char symbol);
 int print_int(int number);
