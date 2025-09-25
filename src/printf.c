@@ -18,8 +18,8 @@ int _printf(const char* format, ...) {
                 break;
             }
 
-            flags_t flags = get_flags(current + 1, &count);
-            width_t width = get_width(current + 1, &count);
+            flags_t flags = get_flags(current + 1);
+            width_t width = get_width(current + 1);
 
             current += flags.length + width.length + 1;
             count += get_format(*current, args, flags);

@@ -1,6 +1,6 @@
 #include "printf.h"
 
-flags_t get_flags(const char* format, int* count) {
+flags_t get_flags(const char* format) {
     flags_t flags;
     flags.minus = 0;
     flags.plus = 0;
@@ -11,28 +11,14 @@ flags_t get_flags(const char* format, int* count) {
     flags.length = 0;
 
     while(*format != '\0') {
-        switch(*format) {
-            case '-':
-                flags.minus = 1;
-                break;
-            case '+':
-                flags.plus = 1;
-                break;
-            case '0':
-                flags.zero = 1;
-                break;
-            case ' ':
-                flags.space = 1;
-                break;
-            case '#':
-                flags.hash = 1;
-                break;
-            default:
-                return flags;
-        }
+        if(*format == '-') flags.minus = 1;
+        else if(*format == '+') flags.plus = 1;
+        else if(*format == '0') flags.zero = 1;
+        else if(*format == ' ') flags.space = 1;
+        else if(*format == '#') flags.hash = 1;
+        else return flags;
 
         flags.length++;
-        (*count)++;
         format++;
     }
 

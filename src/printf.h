@@ -21,8 +21,8 @@ typedef struct {
 int _printf(const char* format, ...);
 
 int get_format(const char specifier, va_list args, flags_t flags);
-flags_t get_flags(const char* format, int* count);
-width_t get_width(const char* format, int* count);
+flags_t get_flags(const char* format);
+width_t get_width(const char* format);
 
 int print_char(char symbol);
 int print_int(int number, flags_t flags);

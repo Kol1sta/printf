@@ -1,6 +1,6 @@
 #include "./printf.h"
 
-width_t get_width(const char* format, int* count) {
+width_t get_width(const char* format) {
     width_t width;
     width.width = 0;
     width.length = 0;
