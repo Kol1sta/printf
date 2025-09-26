@@ -2,7 +2,7 @@
 
 #include "../printf.h"
 
-int print_int(int number, flags_t* flags, width_t* width) {
+int print_int(int number, width_t* width, flags_t* flags) {
     int count = 0;
     int is_negative = 0;
     long number_long = number;
@@ -13,15 +13,15 @@ int print_int(int number, flags_t* flags, width_t* width) {
     }
 
     if(is_negative) {
-        count += print_char('-', NULL);
+        count += print_char('-', NULL, NULL);
     } else if(flags->plus) {
-        count += print_char('+', NULL);
+        count += print_char('+', NULL, NULL);
     } else if(flags->space) {
-        count += print_char(' ',NULL);
+        count += print_char(' ', NULL, NULL);
     }
 
     if(number_long == 0) {
-        return count + print_char('0', NULL);
+        return count + print_char('0', NULL, NULL);
     }
 
     int reversed = 0;
@@ -38,7 +38,7 @@ int print_int(int number, flags_t* flags, width_t* width) {
     }
 
     while(digits > 0) {
-        count += print_char('0' + (reversed % 10), NULL);
+        count += print_char('0' + (reversed % 10), NULL, NULL);
         reversed /= 10;
         digits--;
     }

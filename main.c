@@ -1,7 +1,8 @@
 #include "./src/printf.h"
 
 int main(int argc, char* argv[]) {
-    _printf("%s, %d\n", "Hello, world!", 1984);
+    int a = 2;
+    _printf("%-20c a\n", '2');
 
     return 0;
 }
