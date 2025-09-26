@@ -27,6 +27,7 @@ width_t get_width(const char* format);
 
 int print_char(char symbol, width_t* width, flags_t* flags);
 int print_int(int number, width_t* width, flags_t* flags);
+int print_uint(unsigned int number, width_t* width, flags_t* flags);
 int print_string(char* str, width_t* width, flags_t* flags);
 int print_pointer(void* ptr, width_t* width, flags_t* flags);
 int print_percent(width_t* width, flags_t* flags);

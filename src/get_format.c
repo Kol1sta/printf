@@ -14,6 +14,8 @@ int get_format(const char specifier, va_list args, flags_t* flags, width_t* widt
         count += print_string(va_arg(args, char*), width, flags);
     } else if(specifier == 'p') {
         count += print_pointer(va_arg(args, void*), width, flags);
+    } else if(specifier == 'u') {
+        count += print_uint(va_arg(args, unsigned int), width, flags);
     } else if(specifier == '%') {
         count += print_percent(width, flags);
     }
