@@ -4,6 +4,7 @@ My implementation of `printf` from C
 ### Features
 - Formats
 - Arguments
+- Width
 - Output to console
 
 ### Formats
@@ -19,7 +20,7 @@ My implementation of `printf` from C
 ### Widths
 You can set the minimum field width for your _printf output using digits after flags
 ```c
-_printf("%10s", "Hola");   // Output: "      Hola" (right-aligned)
+_printf("%10s", "Hola");    // Output: "      Hola" (right-aligned)
 _printf("%-10s", "Hola");   // Output: "Hola      " (left-aligned)
 ```
 
