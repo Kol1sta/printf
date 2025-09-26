@@ -13,7 +13,7 @@ int print_string(char* str, width_t* width, flags_t* flags) {
     if(width && width->is_exists) {
         padding_needed = 1;
         if(!flags->minus) {
-            count += set_width(width, width->width - strlen(str));
+            count += set_width(width, width->width - strlen(str), 0);
         }
     }
 
@@ -24,7 +24,7 @@ int print_string(char* str, width_t* width, flags_t* flags) {
     }
 
     if(padding_needed && flags->minus) {
-        count += set_width(width, width->width - strlen(str));
+        count += set_width(width, width->width - strlen(str), 0);
     }
 
     return count;

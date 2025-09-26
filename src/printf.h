@@ -31,6 +31,6 @@ int print_string(char* str, width_t* width, flags_t* flags);
 int print_pointer(void* ptr, width_t* width, flags_t* flags);
 int print_percent(width_t* width, flags_t* flags);
 
-int set_width(width_t* width, int spaces);
+int set_width(width_t* width, int spaces, int zero);
 
 #endif

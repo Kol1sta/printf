@@ -30,6 +30,7 @@ _printf("%-10s", "Hola");   // Output: "Hola      " (left-aligned)
 | +           | Always show sign for signed numeric conversions	    |
 | -           | Left-align the result within the given field width  |
 | ' ' (Space) | Prefix positive numbers with space if no sign shown |
+| 0           | Pad with zeros instead of spaces for numeric conversions. Ignored if - is present or for non-numeric conversions |
 
 ### Example
 ```c

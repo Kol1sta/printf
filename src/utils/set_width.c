@@ -2,8 +2,8 @@
 
 #include "../printf.h"
 
-int set_width(width_t* width, int spaces) {
-    char space = ' ';
+int set_width(width_t* width, int spaces, int zero) {
+    char space = zero ? '0' : ' ';
     int count = 0;
 
     if(spaces > 0) {

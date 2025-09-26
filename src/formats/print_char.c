@@ -9,14 +9,14 @@ int print_char(char symbol, width_t* width, flags_t* flags) {
     if(width && width->is_exists) {
         padding_needed = 1;
         if(!flags->minus) {
-            count += set_width(width, width->width - 1);
+            count += set_width(width, width->width - 1, 0);
         }
     }
 
     count += write(1, &symbol, 1);
 
     if(padding_needed && flags->minus) {
-        count += set_width(width, width->width - 1);
+        count += set_width(width, width->width - 1, 0);
     }
 
     return count;

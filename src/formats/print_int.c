@@ -27,7 +27,7 @@ int print_int(int number, width_t* width, flags_t* flags) {
     int total_length = digits + (sign_needed ? 1 : 0);
 
     if (width != NULL && width->is_exists && !flags->minus) {
-        count += set_width(width, width->width - total_length);
+        count += set_width(width, width->width - total_length, flags->zero);
     }
 
     if(is_negative) {
@@ -56,7 +56,7 @@ int print_int(int number, width_t* width, flags_t* flags) {
     }
 
     if (width != NULL && width->is_exists && flags->minus) {
-        count += set_width(width, width->width - total_length);
+        count += set_width(width, width->width - total_length, 0);
     }
 
     return count;

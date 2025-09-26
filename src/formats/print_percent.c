@@ -9,14 +9,14 @@ int print_percent(width_t* width, flags_t* flags) {
     if(width && width->is_exists) {
         padding_needed = 1;
         if(!flags->minus) {
-            count += set_width(width, width->width - 1);
+            count += set_width(width, width->width - 1, 0);
         }
     }
 
     count += print_char('%', NULL, NULL);
 
     if(padding_needed && flags->minus) {
-        count += set_width(width, width->width - 1);
+        count += set_width(width, width->width - 1, 0);
     }
 
     return count;
