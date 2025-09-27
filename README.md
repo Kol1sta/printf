@@ -8,14 +8,16 @@ My implementation of `printf` from C
 - Output to console
 
 ### Formats
-| Specifier | Description            |
-|:---------:|:-----------------------|
-| %d        | Signed decimal integer |
-| %i        | Signed decimal integer |
-| %c        | Single character       |
-| %s        | String of characters   |
-| %p        | Pointer address        |
-| %%        | Percent symbol         |
+| Specifier | Description             |
+|:---------:|:------------------------|
+| %d        | Signed decimal integer  |
+| %i        | Signed decimal integer  |
+| %u        | Unigned decimal integer |
+| %c        | Single character        |
+| %s        | String of characters    |
+| %p        | Pointer address         |
+| %f        | Floating-point number   |
+| %%        | Percent symbol          |
 
 ### Widths
 You can set the minimum field width for your _printf output using digits after flags

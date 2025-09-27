@@ -7,7 +7,7 @@ int print_uint(unsigned int number, width_t* width, flags_t* flags) {
     int digits = 0;
     unsigned int temp = number;
 
-    if (temp == 0) {
+    if(temp == 0) {
         digits = 1;
     } else {
         while (temp > 0) {

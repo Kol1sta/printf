@@ -26,7 +26,7 @@ int print_int(int number, width_t* width, flags_t* flags) {
     int sign_needed = is_negative || flags->plus || flags->space;
     int total_length = digits + (sign_needed ? 1 : 0);
 
-    if (width != NULL && width->is_exists && !flags->minus) {
+    if(width != NULL && width->is_exists && !flags->minus) {
         count += set_width(width, width->width - total_length, flags->zero);
     }
 
@@ -38,7 +38,7 @@ int print_int(int number, width_t* width, flags_t* flags) {
         count += print_char(' ', NULL, NULL);
     }
 
-    if (number_long == 0) {
+    if(number_long == 0) {
         count += print_char('0', NULL, NULL);
     } else {
         char digit_buffer[12];
@@ -55,7 +55,7 @@ int print_int(int number, width_t* width, flags_t* flags) {
         }
     }
 
-    if (width != NULL && width->is_exists && flags->minus) {
+    if(width != NULL && width->is_exists && flags->minus) {
         count += set_width(width, width->width - total_length, 0);
     }
 
