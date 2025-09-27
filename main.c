@@ -2,7 +2,7 @@
 
 int main(int argc, char* argv[]) {
     int a = 2;
-    _printf("%0+20f \n", 2.0);
+    _printf("%-+20b \n", 20);
 
     return 0;
 }

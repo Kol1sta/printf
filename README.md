@@ -17,6 +17,7 @@ My implementation of `printf` from C
 | %s        | String of characters    |
 | %p        | Pointer address         |
 | %f        | Floating-point number   |
+| %b        | Binary number           |
 | %%        | Percent symbol          |
 
 ### Widths
